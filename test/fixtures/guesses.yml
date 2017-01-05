@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#one:
+#  height: 1
+#  weight: 1
+#  likes: MyString
+#  confirmed: false
+
+#two:
+#  height: 1
+#  weight: 1
+#  likes: MyString
+#  confirmed: false

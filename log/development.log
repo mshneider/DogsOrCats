@@ -1,0 +1,2311 @@
+Started GET "/" for ::1 at 2017-01-04 11:55:30 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 212ms (Views: 200.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 11:55:36 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dK7u48/JsHOMa/pt6s9EOgcYuXYyfBx40rw0ONzLD+Jzm/GdgKfIFqmAwF3fsXwDI6PS6BEv1evM/INK5XF/Zw==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Dogs"], ["created_at", 2017-01-04 19:55:36 UTC], ["updated_at", 2017-01-04 19:55:36 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 3.5ms)
+
+
+  
+NameError (undefined local variable or method `log' for #<GuessController:0x007fb9738b2638>
+Did you mean?  loop):
+  
+app/controllers/guess_controller.rb:32:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.4ms)
+Started GET "/" for ::1 at 2017-01-04 11:55:53 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 11:56:08 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U2weZI79MATJF8SEW4p5uyj+yBBX7RH8WkBFj1IFR4pUWQEawZNIYez8/rRu9EGCDEWjjnS+2G9EAPL9a783Dw==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Dogs"], ["created_at", 2017-01-04 19:56:08 UTC], ["updated_at", 2017-01-04 19:56:08 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+id: 11
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 85ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:12:56 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 150ms (Views: 142.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:13:07 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U/LgK5x3QVmqh6rbx8WqfZdCjeI5iPRB23Y+az6tDSRUx/9V0xk5PI9skOvyu5JEs/nmfBrbPdLFNokZBxd9oQ==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `generate_likes' for GuessHelper:Module):
+  
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (63.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (136.3ms)
+Started GET "/" for ::1 at 2017-01-04 20:14:50 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:14:54 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNsrmZYsyjxFz5cko3tRdYTnoXCVGyh77Mi0JNJyTRi/7jTn2UKyWWAkrRSWBWlMoFzK7rZI4ejyiANW68g9nQ==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (undefined local variable or method `logger' for GuessHelper:Module):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.6ms)
+Started GET "/" for ::1 at 2017-01-04 20:15:08 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:15:12 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wRChXeLc9EPZtMN42Ifuky8nFyciwch/fa4TH3WXPsbGJb4jrbKMJvxf+Ujt+daqC5x8uQGSAexj7qRtTC1OQw==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (undefined local variable or method `logger' for GuessHelper:Module):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.6ms)
+Started GET "/" for ::1 at 2017-01-04 20:16:55 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:17:00 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lm4kGbBVHbX3kCJG9MUa9CMRXd3ZmpZINRIArKtYRqCRWztn/ztl0NJ7GHbBuyLNB6o2Q/rJX9srUrfekuI2JQ==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+closestGuess: #<Guess::ActiveRecord_Relation:0x007fb972cbf600>
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["height", 70], ["weight", 144], ["created_at", 2017-01-05 04:17:00 UTC], ["updated_at", 2017-01-05 04:17:00 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 105ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:17:47 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:17:52 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dr61VqS/CvU1aqP5LYA9T9Lz5IFw6XOQG0TsSM2hEf8Ji6oo69FykBCBmckY/gV29kiPH1O6ugMFBFs69Btheg==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.3ms)[0m  [1m[34mSELECT  "guesses"."likes" FROM "guesses" ORDER BY ABS(height - 70) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `height' for #<ActiveRecord::Relation [#<Guess id: nil, likes: "Dogs">]>):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.8ms)
+Started GET "/" for ::1 at 2017-01-04 20:18:30 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:18:31 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:18:36 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q6LnE3xeWSrbkbsQjhxYxUCDa3QJvd4Xy+luSDTuJ0ZEl/htMzAhT/56gSC7YmD8ZDgA6iruF4TVqdk6DVRXww==", "height"=>"144", "weight"=>"70", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses"."likes" FROM "guesses" ORDER BY ABS(height - 144) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `height' for #<ActiveRecord::Relation [#<Guess id: nil, likes: "Dogs">]>):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.9ms)
+Started GET "/" for ::1 at 2017-01-04 20:19:40 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:19:50 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ssTftDrhVPkP6X8KLvHMuqGblemOKwI8oi4JUTLf9H1/gwAn4X9NsHUn8wdxf8Lzj0FyYVrZZvsyA9XfXEPVA==", "height"=>"144", "weight"=>"20", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  * FROM "guesses" ORDER BY ABS(height - 144) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `height' for #<Guess::ActiveRecord_Relation:0x007fb972a417c0>):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.1ms)
+Started GET "/" for ::1 at 2017-01-04 20:20:15 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:20:20 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DEkVBP7SI9lVA26FptNijZ4ju979BKtxl/uBHtL4+eYLfAp6sbxbvHDoVLWTrVq0upjQQN5XYuKJuzZs60KJYw==", "height"=>"80", "weight"=>"143", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  likes, height FROM "guesses" ORDER BY ABS(height - 80) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `height' for #<Guess::ActiveRecord_Relation:0x007fb96db7df80>):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.0ms)
+Started GET "/" for ::1 at 2017-01-04 20:21:14 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:21:26 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RubqYHxD1ubfjacrVA8htGZvMW6s4B3/IEnvry6Rm3NB0/UeMy2ug/pmnRthcRmNQtRa8I+z1Gw+CVjdFyvr9g==", "height"=>"75", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY ABS(height - 75) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `height' for #<Guess::ActiveRecord_Relation:0x007fb973826b10>):
+  
+app/helpers/guess_helper.rb:9:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+Started GET "/" for ::1 at 2017-01-04 20:21:48 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:22:00 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DGwH3hsSKh1ZNzxJNMvyUNMtPY8W2rKyHaHTVNkKYQoLWRigVHxSeHzcBnkBtcpp95ZWETWJeyED4WQm4LARjw==", "height"=>"71", "weight"=>"160", "commit"=>"Guess"}
+closestGuess height: #<Guess::ActiveRecord_Relation:0x007fb96db8e998>
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY ABS(height - 71) LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `height' for #<Guess::ActiveRecord_Relation:0x007fb96db8e998>):
+  
+app/helpers/guess_helper.rb:10:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.6ms)
+Started GET "/" for ::1 at 2017-01-04 20:26:55 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:26:59 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xBwvEXCCtQ5veUYA0+hNfw8/yDb4UrOFS3umHpN0HSHDKTBvP+zNa0qSfDDmlnVGK4SjqNsBehZVOxFsqs5tpA==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY ABS(height - 70) LIMIT ?[0m  [["LIMIT", 1]]
+closestGuess height: #<Guess:0x007fb96db2f7b8>
+closestGuess height: 70
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["created_at", 2017-01-05 04:26:59 UTC], ["updated_at", 2017-01-05 04:26:59 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 74ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:27:36 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:27:42 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mi6jDNtatQtj5ZuyKeNQtQe6+GPpGAg30psBZ6Afpbc1G7xylDTNbkYOoYIcnWiMIwGT/cpLwaTM27YVmaXVMg==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY ABS(height - 70) LIMIT ?[0m  [["LIMIT", 1]]
+closestGuess height: #<Guess:0x007fb971390440>
+closestGuess height: 70
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["height", 70], ["weight", 144], ["created_at", 2017-01-05 04:27:42 UTC], ["updated_at", 2017-01-05 04:27:42 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:39:29 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 253ms (Views: 242.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:39:33 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GchBXe1g3+QmwTXyh4rIHjpaFTDs3IvN/AHfcAWtnOwe/V4jog6ngQMqD8Ky9PAnHuF+rs+PQl7iQWgCPBfsaQ==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.5ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 144) ASC LIMIT ?[0m  [["LIMIT", 1]]
+closestGuess height: 
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `height' for nil:NilClass):
+  
+app/helpers/guess_helper.rb:11:in `generate_likes'
+app/controllers/guess_controller.rb:30:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.3ms)
+Started GET "/" for ::1 at 2017-01-04 20:41:35 -0800
+Started GET "/" for ::1 at 2017-01-04 20:42:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 213ms (Views: 194.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:42:15 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cG83KbjdcQmRW38oE/6417uPq/kSA532QutmrN2Iw/N3WihX97MJbLSwRRgmgIDunzTAZzFQVGVcq9He5DKzdg==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.7ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+closestGuess is null
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["confirmed", false], ["created_at", 2017-01-05 04:42:16 UTC], ["updated_at", 2017-01-05 04:42:16 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 78ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:49:38 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 20:49:52 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 20:49:58 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0CyZM/fOhPJtrQSCJtJ0qN43PxWwn2mSmHXinczgSPDXGYZNuKD8l0hGPrITrEyR+oxUi5PMoAGGNVXv9Vo4dQ==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 04:49:58 UTC], ["updated_at", 2017-01-05 04:49:58 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 132ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:12:51 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:12:57 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjqLmBBtkcINUbYTlqveB2xCLdsiVaxSqgBXMl4F/IstD5TmXwPppyi6jCOj1eY+SPlGRQEGZcG0QOBAZ7+MDg==", "height"=>"70s", "weight"=>"140", "commit"=>"Guess"}
+Height and weight must be positive integers
+Redirected to http://localhost:3000/guess/ask
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-04 21:12:57 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-04 21:19:22 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:19:27 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w46zbbzbq5FdnzalMNAPjplcHRDNzqSCcm6eAeAJmPrEu6wT87XT9Hh0DJUFrje3ved2ju6dbRFsLilz2bPofw==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template guess/submit, application/submit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Max/DogsOrCats/app/views"
+):
+  
+app/controllers/guess_controller.rb:17:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (65.6ms)
+Started GET "/guess/ask" for ::1 at 2017-01-04 21:19:42 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:19:45 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PIqgCSAWQv2xZL6PZC39utiStm1ELGUlt+475PpSGio7v793b3g6mJSPhL9RU8WD/Cnd82d/rLaproyWw+hqrw==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:19:51 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hPZsaWqOggBYeC2KUMJKgDfCzdu8fknydgYUwtucQGiDw3MXJeD6ZX2TF7plvHK5E3mmRZ8tgGFoRqOw4iYw7Q==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-04 21:36:45 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (11.7ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (49.1ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (146.3ms)
+Started GET "/" for ::1 at 2017-01-04 21:36:53 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `height' for nil:NilClass):
+     6: <%= form_tag "/guess/submit" do %>
+     7:     <div>
+     8:     	<%=label_tag "height (inches)" %>
+     9:     	<%=text_field_tag "height", @guess.height %>
+    10:     </div>
+    11: 
+    12:     <div>
+  
+app/views/guess/ask.html.erb:9:in `block in _app_views_guess_ask_html_erb__519223163575203931_70177673041760'
+app/views/guess/ask.html.erb:6:in `_app_views_guess_ask_html_erb__519223163575203931_70177673041760'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.5ms)
+Started GET "/" for ::1 at 2017-01-04 21:38:28 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 24.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:38:30 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:38:33 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P0T4avqVDjdIjhqY1FaBM2bj6jvUlbpaB2rEIh0ZPpE4cecUtft2Um1lIKjhKLkKQliBpffGc8kZKnNQJKNOFA==", "height"=>"90", "weight"=>"", "commit"=>"Guess"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/guess_controller.rb:11:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.7ms)
+Started GET "/" for ::1 at 2017-01-04 21:39:11 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 13.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:39:15 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AmTJhYzL5+SU3Xuw6EMJL5g/QUUjvrOIh9rLmbmb984FUdb7w6WfgbE2QYDdPTEWvIQq2wDtehuZmnzrgCGHSw==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:39:17 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YtckzxLfK62CP/eo/Z6HjeQXFMfqFrV2FBpbD6VBPPJl4juxXbFTyKfUzZjI4L+0wKx/WclFfOUKWux9nPtMdw==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-04 21:40:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (1.8ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.2ms)
+Started GET "/" for ::1 at 2017-01-04 21:40:26 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:40:28 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:40:32 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JAmBHzHoCkaIgk6CyYbUbfm/7KQKN+5bUCWeU+aFB5QjPJ5hfoZyI61pdLL8+OxU3QSHOilkJ8hOZSkh3z93EQ==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:45:45 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 79ms (Views: 61.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:45:47 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:45:49 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:45:51 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:45:53 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:47:33 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:47:34 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:48:20 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 20.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:48:26 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eVLfeaykMVwNDuTeeEGAWrH7bsSkuLVH3EnFMLDZWBR+Z8AH48pJOSjl3u5NP7hjlUAFWofrfNTCCXJCiWMokQ==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 05:48:26 UTC], ["updated_at", 2017-01-05 05:48:26 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+No template found for GuessController#submit, rendering head :no_content
+Completed 204 No Content in 55ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:49:40 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 25.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:49:44 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HtAT7WR5LcqQT50KldOtX6l5rK4OSwYMB10jG0mrFPwZ5QyTKxdVr7WkpzqgrZVmjcLHMC0Yz58ZHZRpcBFkeQ==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 05:49:44 UTC], ["updated_at", 2017-01-05 05:49:44 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 22.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-04 21:50:05 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (1.8ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.1ms)
+Started GET "/" for ::1 at 2017-01-04 21:50:08 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:51:32 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:51:37 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sVOk1A+fyWRhVT0JIjrji3lTJ6QePlrD8suGV/K/aM+2ZruqQPGxAUS+BzkXRNuyXehMOj1tk1DsizElywUYSg==", "height"=>"70", "weight"=>"145", "commit"=>"Guess"}
+  [1m[36mGuess Load (2.1ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 145) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 145], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 05:51:37 UTC], ["updated_at", 2017-01-05 05:51:37 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 23.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:53:39 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (68.7ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `height' for #<#<Class:0x007fa705d78828>:0x007fa7068231d8>):
+     5: 
+     6: <%= form_tag "/guess/submit" do %>
+     7:     <div>
+     8:     	<%=label_tag height "height (inches)" %>
+     9:     	<%=text_field_tag height "height", @guess.height %>
+    10:     </div>
+    11: 
+  
+app/views/guess/ask.html.erb:8:in `block in _app_views_guess_ask_html_erb__519223163575203931_70177672732740'
+app/views/guess/ask.html.erb:6:in `_app_views_guess_ask_html_erb__519223163575203931_70177672732740'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.2ms)
+Started GET "/" for ::1 at 2017-01-04 21:54:00 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:54:34 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:54:43 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (65.5ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `height' for #<#<Class:0x007fa705d78828>:0x007fa706971328>):
+     5: 
+     6: <%= form_tag "/guess/submit" do %>
+     7:     <div>
+     8:     	<%=label_tag height "height (inches)" %>
+     9:     	<%=text_field_tag "height" "height", @guess.height %>
+    10:     </div>
+    11: 
+  
+app/views/guess/ask.html.erb:8:in `block in _app_views_guess_ask_html_erb__519223163575203931_70177673416320'
+app/views/guess/ask.html.erb:6:in `_app_views_guess_ask_html_erb__519223163575203931_70177673416320'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.7ms)
+Started GET "/" for ::1 at 2017-01-04 21:55:00 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (61.5ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `height' for #<#<Class:0x007fa705d78828>:0x007fa70473a930>):
+     5: 
+     6: <%= form_tag "/guess/submit" do %>
+     7:     <div>
+     8:     	<%=label_tag height "height (inches)" %>
+     9:     	<%=text_field_tag "height", @guess.height %>
+    10:     </div>
+    11: 
+  
+app/views/guess/ask.html.erb:8:in `block in _app_views_guess_ask_html_erb__519223163575203931_70177655489420'
+app/views/guess/ask.html.erb:6:in `_app_views_guess_ask_html_erb__519223163575203931_70177655489420'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.0ms)
+Started GET "/" for ::1 at 2017-01-04 21:55:09 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 21:55:14 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eqPIfBi97Y9oBzwNyZYDzWxWUnmf4SWo0lb94H+gcBV9ltcCV9OV6k3sBj386Dv0SO0557yy7DvMFkqSRhoAkA==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.1ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 05:55:14 UTC], ["updated_at", 2017-01-05 05:55:14 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 26.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 21:59:39 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Max/DogsOrCats/app/views/guess/ask.html.erb:8: syntax error, unexpected ',', expecting ')'
+er.append=(label_tag (:height, "height (inches)") );@output_
+                              ^
+/Users/Max/DogsOrCats/app/views/guess/ask.html.erb:8: syntax error, unexpected ')', expecting keyword_end
+(:height, "height (inches)") );@output_buffer.safe_append='
+                              ^
+/Users/Max/DogsOrCats/app/views/guess/ask.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/guess/ask.html.erb:8: syntax error, unexpected ',', expecting ')'
+app/views/guess/ask.html.erb:8: syntax error, unexpected ')', expecting keyword_end
+app/views/guess/ask.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.1ms)
+Started GET "/" for ::1 at 2017-01-04 21:59:53 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:00:17 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:00:54 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:01:28 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:01:34 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8A85GsAYDhqvr3KPhbfWpHCxSkFR4HXplUdSxUjp72Y9SOaJG4YXU9Vh/oLaOdjtXmutyYUSES4Fao5LJnXOA==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:01:34 UTC], ["updated_at", 2017-01-05 06:01:34 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 27.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:02:11 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:02:16 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rEMpWQgVFI66mziLjg+wdEfFBMgEHQGhcrWvOFn1A4KrdjYnR3ts659wAru7cYhNY35vVidOyDJs9RhKYE9zBw==", "height"=>"70", "weight"=>"145", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.6ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 145) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 145], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:02:16 UTC], ["updated_at", 2017-01-05 06:02:16 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:28:21 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 191ms (Views: 181.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:28:23 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wg/MbrhD1AiDCsgrVcQHSwN6uBenp/VfVwVVNqtimo9dOtMQ9y2sbabh8htguj9yJ8HTiYT0PMxJReJEktjqCg==", "height"=>"", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:35:49 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 67ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:35:52 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:36:09 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vFKvUoEQVw50vH1yQ08mMn7oj5WnLtn/J7OPiKA8xxa7Z7Aszn4va1FXR0J2MR4LWlPkC4R9EGw58zj6mYa3kw==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (2.7ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:36:09 UTC], ["updated_at", 2017-01-05 06:36:09 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 68ms (Views: 45.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:36:50 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 26.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:36:55 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9AqXFhu9F2RAEZaDorXUrTgpvJKrW//v3wXCVuUh4uLzP4hoVNNvAWX6rLOXy+yUHJLXDIgINnzBRXUk3JuSZw==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:36:55 UTC], ["updated_at", 2017-01-05 06:36:55 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/guess_controller.rb:55:in `confirm'
+app/controllers/guess_controller.rb:50:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.9ms)
+Started GET "/" for ::1 at 2017-01-04 22:37:21 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 19.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:37:26 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aE483OXIlM9DIHAW+pVenaNtq1J+X3veX7fR9JDcuTdveyOiqqbsqmbLSibP62akh9bAzF0Msk1B92aGqWbJsg==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:37:26 UTC], ["updated_at", 2017-01-05 06:37:26 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 32.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-04 22:37:59 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (2.7ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.6ms)
+Started GET "/" for ::1 at 2017-01-04 22:38:03 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:38:16 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3dLW/cdrn4aPm7YcEJ+9xz0Vy7C0iXc6o4ZDulMpK+EQlQluHPWGz/VVOhFPEbOOE88sOGB7E/0zq580PbUKg==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:38:16 UTC], ["updated_at", 2017-01-05 06:38:16 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 22:38:18 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/guess/do_confirm"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (1.4ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (87.1ms)
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 22:39:39 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DHtkt+Qkp1pXRtlYlvO1Q8WfafYJcZN9WZ2o6qW6OmILTnvJq0rfP3Kt42ijjY164SQCaCoiWu5H3R+YnABK5w==", "correct"=>"Yes"}
+No template found for GuessController#do_confirm, rendering head :no_content
+Completed 204 No Content in 37ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 22:39:41 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DHtkt+Qkp1pXRtlYlvO1Q8WfafYJcZN9WZ2o6qW6OmILTnvJq0rfP3Kt42ijjY164SQCaCoiWu5H3R+YnABK5w==", "correct"=>"Yes"}
+No template found for GuessController#do_confirm, rendering head :no_content
+Completed 204 No Content in 37ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-04 22:39:43 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (1.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.5ms)
+Started GET "/" for ::1 at 2017-01-04 22:39:49 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 34.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:39:55 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tYA9qIGb4Mcjj8Z6UecOad8LgYjSDUuMqcaUAmd4o2qytSLWzvWYogZk/EpkmTZQ+7DqFvFegh+3hiNwXsLT7w==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.7ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:39:55 UTC], ["updated_at", 2017-01-05 06:39:55 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 35.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 22:39:56 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MEhmfjLcSCiSKD85Ua5kavioxVQXODi2VwiIlg4htlk3fXkAfbIwTbfDBQlk0FxT3BOuyjRr8SVJSD/kN5vG3A==", "correct"=>"Yes"}
+No template found for GuessController#do_confirm, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 22:51:10 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 67ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:51:15 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqMtn1yYbio7AgOdhU8rvC6gmzBpJSrWosFD7DlaVXCdljLhE/YWTx7pOa2wMROFChvwrkp240W8gfSeAOAl9Q==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.8ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:51:15 UTC], ["updated_at", 2017-01-05 06:51:15 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 3.8ms)
+
+
+  
+SyntaxError (/Users/Max/DogsOrCats/app/views/guess/confirm.html.erb:11: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/Users/Max/DogsOrCats/app/views/guess/confirm.html.erb:11: unterminated regexp meets end of file):
+  
+app/views/guess/confirm.html.erb:11: syntax error, unexpected '<', expecting ')'
+app/views/guess/confirm.html.erb:11: unterminated regexp meets end of file
+app/controllers/guess_controller.rb:50:in `submit'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.7ms)
+Started GET "/" for ::1 at 2017-01-04 22:53:03 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 22:53:07 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RNT96PVXqwUQdyTGKjMS3SDsalFUmrwOGC0QCLvM3oZD4eKWujnTYDWcHvYfTSrkBFcBz3fJdZ0Gbad6gnauAw==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 06:53:07 UTC], ["updated_at", 2017-01-05 06:53:07 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 55ms (Views: 39.2ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 22:53:11 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X2EzMg9ZKN5wMC7KxV9+NtkdSb5XhFeLEPmqvMOHOP1YVCxMQDdQu1XbFPrwIUYP/aYiIHTXnhgOuR3O+j1IeA==", "guess_id"=>"29", "correct"=>"Yes"}
+No template found for GuessController#do_confirm, rendering head :no_content
+Completed 204 No Content in 50ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 23:02:52 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 89ms (Views: 65.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:02:58 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"08+mWFyt4uG8FRgLoBpSlacmDLaJdck7+OwVnwzx2kLU+rkmE8OahJn+IjuVZGqsg51nKKomAKjmrKLtNUuqxw==", "height"=>"70", "weight"=>"145", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 145) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 145], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 07:02:58 UTC], ["updated_at", 2017-01-05 07:02:58 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 31.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:03:08 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/tY1S2r21RQJ02c50LvyNuIilQiswVBzqVEw4FxtjPn54yo1JZitcSw4XQnlxcoPxpn+lo+SmeC3EYeSZdf8fA==", "guess_id"=>"30", "correct"=>"Yes"}
+  [1m[36mGuess Load (4.5ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = ?, "updated_at" = ? WHERE "guesses"."id" = ?[0m  [["confirmed", true], ["updated_at", 2017-01-05 07:03:08 UTC], ["id", 30]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `height' for nil:NilClass):
+     5: 
+     6:     <div>
+     7:     	<%= label_tag(:height, "Height (inches)") %>
+     8:     	<%= text_field_tag(:height, @guess.height) %>
+     9:     </div>
+    10: 
+    11:     <div>
+  
+app/views/guess/ask.html.erb:8:in `block in _app_views_guess_ask_html_erb__519223163575203931_70177655229300'
+app/views/guess/ask.html.erb:4:in `_app_views_guess_ask_html_erb__519223163575203931_70177655229300'
+app/controllers/guess_controller.rb:74:in `do_confirm'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.3ms)
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:03:53 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/tY1S2r21RQJ02c50LvyNuIilQiswVBzqVEw4FxtjPn54yo1JZitcSw4XQnlxcoPxpn+lo+SmeC3EYeSZdf8fA==", "guess_id"=>"30", "correct"=>"Yes"}
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 42ms (Views: 25.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 23:03:58 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 23:03:58 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 23:05:04 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:05:06 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5OoMvZ47mp0Wy9xhuzD0MFEPs/Xx7PaUJQxnVDjXBb3j3xPD0VXi+DMg5lGOTswJdbTYa9K/Pwc7TNAmAW11OA==", "height"=>"", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 87ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:05:13 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xzFyK9MC4Rm/ZQiS1FDmSx8jDI8b+MhP58nesAY849rABG1VnGyZfJqOMqLhLt5yO5hnETirAdz5iWnCP4aTXw==", "height"=>"70", "weight"=>"144", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.7ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 144) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.7ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 144], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 07:05:13 UTC], ["updated_at", 2017-01-05 07:05:13 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 56ms (Views: 33.6ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:05:16 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IAfGf81PZlm9tCgXxRGJ4CAY8MWAhqnA5xTzAe6Lqe0nMtkBgiEePJhfEifwb7HZBKObW6PVYFP5VERz1zHZaA==", "guess_id"=>"31", "correct"=>"Yes"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = ?, "updated_at" = ? WHERE "guesses"."id" = ?[0m  [["confirmed", true], ["updated_at", 2017-01-05 07:05:16 UTC], ["id", 31]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 75ms (Views: 65.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 23:06:07 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 17.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:06:20 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HkpCq1yugf4CbHgtfva/DZENVuO34tdfq5CC8kaOyUoZf13VE8D5myeHQh1LiIc0tbY9fZSxHsy10DWAfzS5zw==", "height"=>"140", "weight"=>"70", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 140) ASC, ABS(weight - 70) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 140], ["weight", 70], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 07:06:20 UTC], ["updated_at", 2017-01-05 07:06:20 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 60ms (Views: 47.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:06:21 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ELA/me0OezZL4P2mhKIncfTtd1KvYFZJQhl9Fg8dRXvd9+AKNpBifzEucavbLCk42jeQ2nuSMo7SNKGYYYFkA==", "guess_id"=>"32", "correct"=>"Yes"}
+  [1m[36mGuess Load (0.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = ?, "updated_at" = ? WHERE "guesses"."id" = ?[0m  [["confirmed", true], ["updated_at", 2017-01-05 07:06:21 UTC], ["id", 32]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `ask_url' for #<GuessController:0x007fa705bf8278>):
+  
+app/controllers/guess_controller.rb:76:in `do_confirm'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.8ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.9ms)
+Started GET "/guess/submit" for ::1 at 2017-01-04 23:06:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (2.8ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.6ms)
+Started GET "/" for ::1 at 2017-01-04 23:06:41 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:06:44 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lNdEZ0FWe2bm1BwMwItffBUHx5/hENxOZQbDdfc+NdST4lsZDjgDA8M/Jjz19WdFMbysAcJDFd17RnQHzoRFUQ==", "height"=>"", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:06:50 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ODFG5BCGA/NBDFveGVU06v7cyFHLj+xOZuLIVzuMj1E/BFmaX+h7lmTnYe4sKwzT2mejz+jcJd14on8lAjb/1A==", "height"=>"wdfdsfd", "weight"=>"2342", "commit"=>"Guess"}
+Height and weight must be positive integers
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:07:01 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLwFjbidxADcjwibJMc6ouq2iG4DOuimHnOLT/hOKXePiRrz9/O8ZflkMqsRuQKbzg3j8CBpITUAMzw9wfRZ8g==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 07:07:01 UTC], ["updated_at", 2017-01-05 07:07:01 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 27.5ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:07:03 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wflZqlHSxmW3aX0tC1FydfCfpGfENksQgyrOBA1VrwvGzEbUHry+AJKCRx0+L0pM1CTP+edlgoOdanl2NO/fjg==", "guess_id"=>"33", "correct"=>"Yes"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = ?, "updated_at" = ? WHERE "guesses"."id" = ?[0m  [["confirmed", true], ["updated_at", 2017-01-05 07:07:03 UTC], ["id", 33]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/guess/ask
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-04 23:07:03 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-04 23:13:02 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 77ms (Views: 56.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:13:35 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2D43OPHFx5b6kT1EnvLKC/ZmvDZ23BZftlsocR1MQfnfCyhGvqu/8996B3SrjPIy0t3XqFWP38yoG58DJPYxfA==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.5ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 07:13:35 UTC], ["updated_at", 2017-01-05 07:13:35 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 70ms (Views: 55.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:13:38 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uhYySoshPsp5GIlmOJVaVP5sSx6ThyR4vJlJgfm/Sti9Iy00xE9Gr1zzs1YN62Jt2tcggLDU7eui2f7zwAU6XQ==", "guess_id"=>"34", "incorrect"=>"No"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/guess/ask
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-04 23:13:38 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:13:50 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"msF1pNBoHXpQeCAIHk7p2EoaCdNv3RDpi+neYLQA+SWd9GranwZlH3WTGjgrMNHhbqFiTUyO2XqVqWkSjbqJoA==", "height"=>"60", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:14:13 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kNtXa127eCktE2qPunvLZwWOcnjFd6dzkMbTqTP7Mv+X7kgVEtUATAj4UL+PBfNeITUZ5uYkbuCOhmTbCkFCeg==", "height"=>"76", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-04 23:16:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (2.8ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.5ms)
+Started GET "/" for ::1 at 2017-01-04 23:16:19 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (9.4ms)
+Started GET "/" for ::1 at 2017-01-04 23:16:19 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 101ms (Views: 81.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-04 23:16:28 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u4ZQFcwGVUESI4gxG+reFnulw8YAhJcd0MgNklw/pCG8s09rg2gtJDfIsgEulOYvXx6oWCPXXo7OiLrgZYXUpA==", "height"=>"70", "weight"=>"60", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.5ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 60) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 60], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 07:16:28 UTC], ["updated_at", 2017-01-05 07:16:28 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 30.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-04 23:16:34 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSJr/F6bs58uzBov2ABVlm8a3XJJceGWPpnUQo2+qAQ2F3SCEfXL+gsnIB/tfm2vS6G27GoiKAUg2WMwtATYgQ==", "guess_id"=>"35", "correct"=>"Yes"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = ?, "updated_at" = ? WHERE "guesses"."id" = ?[0m  [["confirmed", true], ["updated_at", 2017-01-05 07:16:34 UTC], ["id", 35]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/guess/ask
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-04 23:16:34 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-04 23:16:36 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-05 09:04:31 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 302ms (Views: 260.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-05 09:05:39 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-05 09:05:51 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-05 09:06:08 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"clCpV5IeE/bp8bNPWUk2OerTWgRyNpmAhmxTOAmuoId1ZbYp3XBrk8waiX9sNw4AzmgxmlFlUBOYLORKMBTQAg==", "height"=>"234", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-05 09:06:26 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (4.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.6ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.9ms)
+Started GET "/" for ::1 at 2017-01-05 09:06:31 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 09:06:34 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-05 09:06:37 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GnRaft2Mx9XzxKn8bWzY2j8mP0t0Vhkz+/0HuIzzTfQdQUUAkuK/sNYvk8xYEuDjG51U1VcF0KDlvbDKtUk9cQ==", "height"=>"sad", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 09:34:24 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 243ms (Views: 221.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 09:34:27 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-05 09:34:33 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cSpNKD5XoXtTx/dhEeTNOOATh622Rjmx2fHFtPFwCXV2H1JWcTnZHnYszVEkmvUBxKjsM5UV8CLHsXLGyMp58A==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.7ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 17:34:33 UTC], ["updated_at", 2017-01-05 17:34:33 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 19.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 09:36:45 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-05 09:36:49 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"snQoVRfLlEG/WqXID+ArezDyAcBEnIjrryREfOPDYMC1QTcrWKXsJJqxn/g6nhNCFElqXmfPQXixZPMO2nkQRQ==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.1ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 17:36:49 UTC], ["updated_at", 2017-01-05 17:36:49 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 20.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 09:37:03 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-05 09:37:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (2.5ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.2ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.6ms)
+Started GET "/" for ::1 at 2017-01-05 09:37:34 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-05 09:37:37 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H730NInTJUkt6VCxX3O92Uqv5w14SnJ1GfXRRVa2OsAYiOtKxr1dLAgCaoFqDYXgbhSMk1sZu+YHtWY3bwxKRQ==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.2ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 17:37:37 UTC], ["updated_at", 2017-01-05 17:37:37 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/guess/submit" for ::1 at 2017-01-05 09:40:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/submit"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (5.6ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.8ms)
+Started GET "/" for ::1 at 2017-01-05 09:40:23 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/submit" for ::1 at 2017-01-05 09:40:26 -0800
+Processing by GuessController#submit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WF0uZ6PNEIfSeaTwVIlhy6HNDaFrctOv0zGTkdhH8ZlfaDEZ7KNo4veSnsBh91nyhXZmP0ghGjzNcSTj4f2BHA==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (2.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 17:40:26 UTC], ["updated_at", 2017-01-05 17:40:26 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 66ms (Views: 46.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:07:54 -0800
+Started GET "/" for ::1 at 2017-01-05 11:07:54 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (10.2ms)
+  Rendered guess/ask.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 757ms (Views: 712.7ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 755ms (Views: 716.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:09:39 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:12:10 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 114ms (Views: 111.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:13:29 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:13:57 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 11:14:03 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QcAbHyDn+2U1CauG1bn8uH/aDiYXHHjgbtxVZX4Gm5xG9QRhb4mDABDikbbgx8SBW2FluDRPsXNwnOIXR7zrGQ==", "height"=>"", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 11:14:20 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eh6ZWGGFPyXACywdILk4Wii2LZ0cXXmj2JlHvb4wtCIVK4YmLutHQOXgFi0VxwBjDA1GAz8OsDDG2fDPh4rEpw==", "height"=>"70", "weight"=>"100", "commit"=>"Guess"}
+  [1m[36mGuess Load (1.3ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed DESC, ABS(height - 70) ASC, ABS(weight - 100) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 100], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 19:14:20 UTC], ["updated_at", 2017-01-05 19:14:20 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 43ms (Views: 23.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/guess/do_ask" for ::1 at 2017-01-05 11:16:16 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/guess/do_ask"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (2.3ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (36.3ms)
+  Rendering /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Max/.rvm/gems/ruby-2.4.0@DogsOrCats/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.8ms)
+Started GET "/" for ::1 at 2017-01-05 11:16:19 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:16:21 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 11:16:26 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iodYC+sQA0m2Xo2cPWQxo0DsYo4ivk1XukKktgZCBTuNskd1pH57LJO1t6wIGgmaZFcJEAHthMSkAhPEP/h1vg==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (0.9ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed DESC, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 19:16:26 UTC], ["updated_at", 2017-01-05 19:16:26 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 49.8ms | ActiveRecord: 4.6ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (28.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4029586381712009160);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGuesses (20170104193041)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.9ms)[0m  [1m[35mCREATE TABLE "guesses" ("id" serial primary key, "height" integer, "weight" integer, "likes" character varying, "confirmed" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170104193041"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-01-05 19:52:32 UTC], ["updated_at", 2017-01-05 19:52:32 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4029586381712009160)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-01-05 11:53:26 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+Started GET "/" for ::1 at 2017-01-05 11:53:27 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (12.2ms)
+  Rendered guess/ask.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 437ms (Views: 434.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 517ms (Views: 442.4ms | ActiveRecord: 39.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 11:53:31 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kt7FfWJ+ZcTbfp1nB26o0RgPCF9oxi/C0oqIJFCqZVQt69oDLRAdof6Vp1cyEJDoPLRjwUuV5lHMyj9WaRAV0Q==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (2.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed DESC, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 19:53:31 UTC], ["updated_at", 2017-01-05 19:53:31 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 19.5ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-05 11:53:34 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTb/OvIN3v20wcyg7/+GuRK3eVefSxQsjIVyAXEnS0aOA+BEvWOmmJEq9pDagb6ANgwSybwY3b+SxcVzSJ07ww==", "guess_id"=>"1", "correct"=>"Yes"}
+  [1m[36mGuess Load (1.8ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = $1, "updated_at" = $2 WHERE "guesses"."id" = $3[0m  [["confirmed", true], ["updated_at", 2017-01-05 19:53:34 UTC], ["id", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/guess/ask
+Completed 302 Found in 22ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-05 11:53:34 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:58:34 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 256ms (Views: 226.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 11:58:51 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u69bgtm7KWukzoX2oxKm9gBH0NmZ0/sNbva59tgEq2S8mkT8ltVRDoElv8aWbJ7PJPy7R7qAMp5wtg6E4b7b4Q==", "height"=>"70", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:58:58 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 11:59:04 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 12:00:57 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zVuOvtUHZmU7ZJRRgwLTvj0M34ByBy2NUVAXG0YL6ozKbpHAmmkeAB6PrmG2fOuHGbe0HlFU5B5PEKBpf7GaCQ==", "height"=>"sss", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 58ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 12:01:28 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tl9g6iKvnlFum8AgJZNmJhUk+lhwB1cPJi8DsUm58Dixan+UbcHmNEtw+hAQ7V4fMZ+RxlNUnpw4b7TDcAOAvQ==", "height"=>"sss", "weight"=>"", "commit"=>"Guess"}
+Height and weight required
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 12:01:32 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jWJ0ydwcoozqO1s6n0HKTL4PBpfMKNO3eFnEMLLrmNKKV2u3k3La6c/QYQqqP/J1mrRtCe97GiRmGXNCi1HoVw==", "height"=>"sss", "weight"=>"sss", "commit"=>"Guess"}
+Height and weight must be positive integers
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/guess/do_ask" for ::1 at 2017-01-05 12:02:04 -0800
+Processing by GuessController#do_ask as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GOUWnyCjlw0VBqGyilWp03tYjysI48BKJo6kjt9V17of0Anhb83vaDDtm4K/K5HqX+PktSuwCdk4zhP85u+nPw==", "height"=>"70", "weight"=>"140", "commit"=>"Guess"}
+  [1m[36mGuess Load (2.7ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE ("guesses"."likes" IS NOT NULL) ORDER BY confirmed DESC, ABS(height - 70) ASC, ABS(weight - 140) ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "guesses" ("height", "weight", "likes", "confirmed", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["height", 70], ["weight", 140], ["likes", "Cats"], ["confirmed", false], ["created_at", 2017-01-05 20:02:05 UTC], ["updated_at", 2017-01-05 20:02:05 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering guess/confirm.html.erb within layouts/application
+  Rendered guess/confirm.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 360ms (Views: 292.6ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/guess/do_confirm" for ::1 at 2017-01-05 12:02:30 -0800
+Processing by GuessController#do_confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"My3+FlKjpN6YFz6bKZquapPYGWGynBkjr/maZEyFNpw0GOFoHc3cu738BKsc5JZTt2Ny/5HP0LCxuS0WdT9GGQ==", "guess_id"=>"42", "correct"=>"Yes"}
+  [1m[36mGuess Load (1.4ms)[0m  [1m[34mSELECT  "guesses".* FROM "guesses" WHERE "guesses"."id" = ? LIMIT ?[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "guesses" SET "confirmed" = ?, "updated_at" = ? WHERE "guesses"."id" = ?[0m  [["confirmed", true], ["updated_at", 2017-01-05 20:02:30 UTC], ["id", 42]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/guess/ask
+Completed 302 Found in 33ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/guess/ask" for ::1 at 2017-01-05 12:02:30 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 12:08:17 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 275ms (Views: 254.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 12:08:20 -0800
+Processing by GuessController#ask as HTML
+  Rendering guess/ask.html.erb within layouts/application
+  Rendered guess/ask.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+

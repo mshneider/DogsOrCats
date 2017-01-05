@@ -1,0 +1,35 @@
+// Place all the styles related to the Guess controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$red-color: #d9534f;
+$green-color: #5cb85c;
+
+// ------ Global ---------
+
+#error-message {
+	color: $red-color;
+}
+
+#success-message {
+	color: $green-color;
+}
+
+// ------ Ask Page ---------
+
+#ask-page {
+	#height-field {
+		margin-bottom: 10px;
+	}
+	#weight-field {
+		margin-bottom: 20px;
+	}	
+}
+
+// ------ Confirm Page ---------
+
+#confirm-page {
+	#guess-results-label {
+		margin-bottom: 20px;
+	}	
+}

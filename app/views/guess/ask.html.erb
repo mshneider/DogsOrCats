@@ -1,0 +1,26 @@
+<div id="ask-page">
+
+    <%= form_tag "/guess/do_ask" do %>
+
+        <h4>Please enter your height and weight, and we will try to guess if you like cats or dogs!</h4>
+
+        <p id="error-message"><%= flash[:error] %></p>
+        <p id="success-message"><%= flash[:notice] %></p>
+
+        <div id="height-field">
+        	<%= label_tag(:height, "Height (inches)") %>
+        	<%= text_field_tag(:height, @guess.height) %>
+        </div>
+
+        <div id="weight-field">
+        	<%= label_tag(:weight, "Weight (lbs)") %>
+        	<%= text_field_tag(:weight, @guess.weight) %>
+        </div>
+
+        <div>
+        	<%= submit_tag "Guess" %>
+        </div>
+
+    <% end %>
+
+</div>
