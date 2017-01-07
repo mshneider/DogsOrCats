@@ -1,73 +1,100 @@
 require 'test_helper'
 
 class GuessControllerTest < ActionDispatch::IntegrationTest
-  test "ask page renders correctly" do
-    get guess_ask_url
+  test "index page renders correctly" do
+    get "/"
     assert_response :success
-    assert_select "h4", "Please enter your height and weight, and we will try to guess if you like cats or dogs!"
+    assert_select "div#index-page"
     assert_nil flash[:notice]
     assert_nil flash[:error]
   end
 
-  test "asking with empty height" do
-    post guess_do_ask_url, params: { height: "", weight: "140" }
-    assert_response :success
-    assert_select "h4", "Please enter your height and weight, and we will try to guess if you like cats or dogs!"
+  test "submit with empty height" do
+    post "/guess/submit", params: { height: "", weight: "140" }
+    assert_response :bad_request
+    assert_equal "Height and weight are required!", @response.body
     assert_nil flash[:notice]
-    assert_equal "Height and weight are required!", flash[:error]
+    assert_nil flash[:error]
   end
 
-  test "asking with empty weight" do
-    post guess_do_ask_url, params: { height: "70", weight: nil }
-    assert_response :success
-    assert_select "h4", "Please enter your height and weight, and we will try to guess if you like cats or dogs!"
+  test "submit with empty weight" do
+    post "/guess/submit", params: { height: "70", weight: nil }
+    assert_response :bad_request
+    assert_equal "Height and weight are required!", @response.body
     assert_nil flash[:notice]
-    assert_equal "Height and weight are required!", flash[:error]
+    assert_nil flash[:error]
   end
 
-  test "asking with invalid height" do
-    post guess_do_ask_url, params: { height: "XXX", weight: "140" }
-    assert_response :success
-    assert_select "h4", "Please enter your height and weight, and we will try to guess if you like cats or dogs!"
+  test "submit with invalid height" do
+    post "/guess/submit", params: { height: "XXX", weight: "140" }
+    assert_response :bad_request
+    assert_equal "Height and weight must be positive numbers!", @response.body
     assert_nil flash[:notice]
-    assert_equal "Height and weight must be positive numbers!", flash[:error]
+    assert_nil flash[:error]
   end
 
-  test "asking with invalid weight" do
-    post guess_do_ask_url, params: { height: "70", weight: "One hundred pounds" }
-    assert_response :success
-    assert_select "h4", "Please enter your height and weight, and we will try to guess if you like cats or dogs!"
+  test "submit with invalid weight" do
+    post "/guess/submit", params: { height: "70", weight: "One hundred pounds" }
+    assert_response :bad_request
+    assert_equal "Height and weight must be positive numbers!", @response.body
     assert_nil flash[:notice]
-    assert_equal "Height and weight must be positive numbers!", flash[:error]
+    assert_nil flash[:error]
   end
 
-  test "asking with valid height and weight" do
+  test "submit with valid height and weight" do
    	# create one guess, just so that we're guaranteed to show "cats" instead of "dogs"
-   	Guess.create(height: 68, weight: 130, likes: "Cats", confirmed: true)
+   	guess = Guess.create(height: 68, weight: 130, likes: "Cats", confirmed: true)
 
-    post guess_do_ask_url, params: { height: "70", weight: "150" }
+    post "/guess/submit", params: { height: "70", weight: "150" }
     assert_response :success
-    assert_select "h4", "Please confirm the guess below, it helps us learn!"
+    response_body = JSON.parse(@response.body)
+    assert_equal guess.id + 1, response_body["guessId"]
+    assert_equal "Cats", response_body["likes"]
     assert_nil flash[:notice]
     assert_nil flash[:error]
-    assert_select "p", "We think that you like cats. Is that correct?"
   end
 
-  test "confirm correct" do
+  test "confirm with empty guessId" do
+    guess = Guess.create(height: 68, weight: 130, likes: "Cats", confirmed: false)
+
+    put "/guess/confirm", params: { guessId: "", confirmed: "true" }
+    assert_response :bad_request
+    assert_equal "Guess id and confirmed are required!", @response.body
+    assert_nil flash[:notice]
+    assert_nil flash[:error]
+  end
+
+  test "confirm with empty confirmed" do
+    guess = Guess.create(height: 68, weight: 130, likes: "Cats", confirmed: false)
+
+    put "/guess/confirm", params: { guessId: guess.id, confirmed: nil }
+    assert_response :bad_request
+    assert_equal "Guess id and confirmed are required!", @response.body
+    assert_nil flash[:notice]
+    assert_nil flash[:error]
+  end
+
+  test "confirm with confirmed = true" do
    	guess = Guess.create(height: 68, weight: 130, likes: "Cats", confirmed: false)
 
-    post guess_do_confirm_url, params: { guess_id: guess.id, correct: true }
-    assert_redirected_to guess_ask_url
+    put "/guess/confirm", params: { guessId: guess.id, confirmed: true }
+    assert_response :success
+    assert_equal "", @response.body
+    assert_nil flash[:notice]
+    assert_nil flash[:error]
 
     checkGuess = Guess.find(guess.id)
     assert checkGuess.confirmed
   end
 
-  test "confirm incorrect" do
+  test "confirm with confirmed = false" do
    	guess = Guess.create(height: 68, weight: 130, likes: "Cats", confirmed: false)
 
-    post guess_do_confirm_url, params: { guess_id: guess.id, incorrect: true }
-    assert_redirected_to guess_ask_url
+    put "/guess/confirm", params: { guessId: guess.id, confirmed: false }
+    assert_response :success
+    assert_equal "", @response.body
+    assert_nil flash[:notice]
+    assert_nil flash[:error]
 
     checkGuess = Guess.find(guess.id)
     assert !checkGuess.confirmed

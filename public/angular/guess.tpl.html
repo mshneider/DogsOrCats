@@ -1,0 +1,60 @@
+<div id="guess-page">
+
+    <div class="row" ng-if="messages.success">
+        <div class="col-xs-12">
+            <div class="alert alert-success" role="alert">{{ messages.success }}</div>
+        </div>
+    </div>
+    <div class="row" ng-if="messages.error">
+        <div class="col-xs-12">
+            <div class="alert alert-danger" role="alert">{{ messages.error }}</div>
+        </div>
+    </div>
+
+    <h4 id="instructions">
+        Please enter your height and weight, and we will try to guess if you like cats or dogs!
+    </h4>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+
+            <form name="measurementsForm">
+                <div class="form-group">
+                    <label for="height-field" class="control-label">
+                        Height (inches)
+                    </label>
+                    <input id="height-field" class="form-control" type="text"
+                           ng-model="measurements.height" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight-field" class="control-label">
+                        Weight (lbs)
+                    </label>
+                    <input id="weight-field" class="form-control" type="text"
+                           ng-model="measurements.weight" required/>
+                </div>
+                <button id="submit-button" class="btn btn-primary" ng-click="submitGuess()"
+                        ng-disabled="measurementsForm.$dirty && !measurementsForm.$valid">
+                    Submit Guess
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirm-section" ng-if="guessInfo.id && guessInfo.likes">
+        <h4>
+            Thanks! We think that you like {{ guessInfo.likes | lowercase }}. Is that correct?
+        </h4>
+        <div class="row">
+            <div class="col-xs-12">
+                <button class="btn btn-success" ng-click="confirmGuess(true)">
+                    Yes
+                </button>
+                <button class="btn btn-danger" ng-click="confirmGuess(false)">
+                    No
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

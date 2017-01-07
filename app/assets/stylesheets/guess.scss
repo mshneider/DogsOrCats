@@ -2,34 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$red-color: #d9534f;
-$green-color: #5cb85c;
+// ------ Index Page ---------
 
-// ------ Global ---------
-
-#error-message {
-	color: $red-color;
+#index-page {
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
-#success-message {
-	color: $green-color;
-}
+// ------ Guess Page ---------
 
-// ------ Ask Page ---------
-
-#ask-page {
-	#height-field {
-		margin-bottom: 10px;
+#guess-page {
+	#instructions {
+		margin-bottom: 30px;
 	}
-	#weight-field {
-		margin-bottom: 20px;
-	}	
+
+	#submit-button {
+		margin-top: 20px;
+	}
+
+	#confirm-section {
+		margin-top: 30px;
+
+		h4 {
+			margin-bottom: 20px;
+		}
+
+		button {
+			margin-right: 5px;
+		}
+	}
 }
 
-// ------ Confirm Page ---------
-
-#confirm-page {
-	#guess-results-label {
-		margin-bottom: 20px;
-	}	
-}

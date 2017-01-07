@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'guess/ask'
-  post 'guess/do_ask'
-  
-  post 'guess/do_confirm'
 
-  root 'guess#ask'
+  post 'guess/submit'
+  put 'guess/confirm'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # main UI page / Angular wrapper
+  root 'home#index'
 
 end
